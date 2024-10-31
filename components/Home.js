@@ -13,10 +13,10 @@ function Home() {
   const [topArticle, setTopArticle] = useState({});
 
   useEffect(() => {
-    fetch('http://localhost:3000/articles')
+    fetch('http://localhost:5000/articles')
       .then(response => response.json())
       .then(data => {
-        setTopArticle(data.articles[0]);
+        setTopArticle(data.articles[4]);
         setArticlesData(data.articles.filter((data, i) => i > 0));
       });
   }, []);
